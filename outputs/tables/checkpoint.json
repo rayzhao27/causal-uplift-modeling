@@ -1,0 +1,336 @@
+{
+  "experiment_meta": {
+    "overview": {
+      "n_rows": 120000.0,
+      "n_treatment": 59943.0,
+      "n_control": 60057.0,
+      "treatment_share": 0.499525,
+      "conversion_treatment": 6090.0,
+      "conversion_control": 5796.0,
+      "visit_treatment": 17584.0,
+      "visit_control": 15999.0,
+      "conversion_rate_treatment": 0.10159651669085631,
+      "conversion_rate_control": 0.09650831709875618,
+      "visit_rate_treatment": 0.2933453447441736,
+      "visit_rate_control": 0.2663969229232229,
+      "exposure_rate_treatment": 0.8205128205128205,
+      "exposure_rate_control": 0.0
+    },
+    "quality": {
+      "n_rows": 120000.0,
+      "distinct_row_id": 120000.0,
+      "missing_treatment": 0.0,
+      "missing_conversion": 0.0,
+      "missing_visit": 0.0,
+      "missing_exposure": 0.0,
+      "missing_age": 0.0,
+      "missing_tenure_months": 0.0,
+      "missing_prior_purchases": 0.0,
+      "missing_prior_spend": 0.0,
+      "missing_recency_days": 0.0,
+      "missing_sessions_30d": 0.0,
+      "missing_email_opens_30d": 0.0,
+      "missing_pages_viewed_30d": 0.0,
+      "missing_avg_order_value": 0.0,
+      "missing_discount_sensitivity": 0.0,
+      "missing_is_loyalty_member": 0.0,
+      "missing_is_weekend_shopper": 0.0,
+      "missing_device_mobile": 0.0,
+      "missing_device_desktop": 0.0,
+      "invalid_treatment": 0.0,
+      "invalid_conversion": 0.0,
+      "invalid_visit": 0.0,
+      "invalid_exposure": 0.0,
+      "duplicate_hash_rows": 0.0
+    },
+    "balance": {
+      "balanced": true,
+      "max_abs_smd_pretreatment": 0.013826143422476577,
+      "n_flagged_pretreatment": 0,
+      "threshold": 0.1,
+      "verdict": "Yes. Pre-treatment covariates are balanced: the largest absolute standardized difference is 0.0138, below the 0.10 threshold. Treatment assignment is consistent with the randomized design, so the unadjusted difference in outcomes is a credible causal estimate. exposure is post-treatment and is imbalanced (SMD 3.024); it is excluded from every model."
+    },
+    "n_extreme_features": 0,
+    "n_users": 120000
+  },
+  "experiment": {
+    "conversion": {
+      "outcome": "conversion",
+      "n_treatment": 59943,
+      "n_control": 60057,
+      "conversions_treatment": 6090,
+      "conversions_control": 5796,
+      "rate_treatment": 0.10159651669085631,
+      "rate_control": 0.09650831709875618,
+      "absolute_lift": 0.005088199592100134,
+      "absolute_se": 0.0017246891680397457,
+      "ci_low": 0.0017078709382158837,
+      "ci_high": 0.008468528245984385,
+      "relative_lift": 0.05272291285416797,
+      "relative_lift_ci_low": 0.017389962710414597,
+      "relative_lift_ci_high": 0.08928294151414251,
+      "risk_ratio": 1.052722912854168,
+      "risk_ratio_ci_low": 1.0173899627104146,
+      "risk_ratio_ci_high": 1.0892829415141425,
+      "z_statistic": 2.950169613170141,
+      "z_pvalue": 0.0031759952118484273,
+      "chi2_statistic": 8.70350074647245,
+      "chi2_pvalue": 0.003175995211848443,
+      "rate_treatment_ci_low": 0.09920344565533691,
+      "rate_treatment_ci_high": 0.10404064798369399,
+      "rate_control_ci_low": 0.09417243488460458,
+      "rate_control_ci_high": 0.09889581353098098,
+      "observed_effect": 0.005088199592100134,
+      "cohens_h": 0.017033953873372032,
+      "achieved_power": 0.8390116303345859,
+      "mde_80_power": 0.004776258863914573,
+      "required_sample_sizes": [
+        {
+          "delta": 0.002,
+          "n_treatment": 345015.31215924956,
+          "n_control": 345671.46459716815,
+          "n_total": 690686.7767564177
+        },
+        {
+          "delta": 0.005,
+          "n_treatment": 55951.49168831374,
+          "n_control": 56057.900610998084,
+          "n_total": 112009.39229931182
+        },
+        {
+          "delta": 0.01,
+          "n_treatment": 14295.282233466973,
+          "n_control": 14322.469097231135,
+          "n_total": 28617.751330698105
+        },
+        {
+          "delta": 0.02,
+          "n_treatment": 3723.4078536116062,
+          "n_control": 3730.489055675429,
+          "n_total": 7453.896909287036
+        }
+      ]
+    },
+    "visit": {
+      "outcome": "visit",
+      "n_treatment": 59943,
+      "n_control": 60057,
+      "conversions_treatment": 17584,
+      "conversions_control": 15999,
+      "rate_treatment": 0.2933453447441736,
+      "rate_control": 0.2663969229232229,
+      "absolute_lift": 0.026948421820950696,
+      "absolute_se": 0.0025908013250353734,
+      "ci_low": 0.021870544532782712,
+      "ci_high": 0.03202629910911868,
+      "relative_lift": 0.10115890801305305,
+      "relative_lift_ci_low": 0.0813204663535676,
+      "relative_lift_ci_high": 0.1213613155639861,
+      "risk_ratio": 1.101158908013053,
+      "risk_ratio_ci_low": 1.0813204663535676,
+      "risk_ratio_ci_high": 1.121361315563986,
+      "z_statistic": 10.397182727466564,
+      "z_pvalue": 2.5537195736757177e-25,
+      "chi2_statistic": 108.10140866832937,
+      "chi2_pvalue": 2.553719573675351e-25,
+      "rate_treatment_ci_low": 0.28971389385582247,
+      "rate_treatment_ci_high": 0.29700328094280803,
+      "rate_control_ci_low": 0.26287635920087066,
+      "rate_control_ci_high": 0.269947368897611,
+      "observed_effect": 0.026948421820950696,
+      "cohens_h": 0.06004287795445018,
+      "achieved_power": 1.0,
+      "mde_80_power": 0.0071505357141113165,
+      "required_sample_sizes": [
+        {
+          "delta": 0.002,
+          "n_treatment": 768047.4007087067,
+          "n_control": 769508.0784138731,
+          "n_total": 1537555.4791225798
+        },
+        {
+          "delta": 0.005,
+          "n_treatment": 123321.92764381424,
+          "n_control": 123556.46211408424,
+          "n_total": 246878.38975789846
+        },
+        {
+          "delta": 0.01,
+          "n_treatment": 31008.96891269488,
+          "n_control": 31067.94197804108,
+          "n_total": 62076.91089073596
+        },
+        {
+          "delta": 0.02,
+          "n_treatment": 7839.1886270539135,
+          "n_control": 7854.097248635819,
+          "n_total": 15693.285875689733
+        }
+      ]
+    }
+  },
+  "n_users": 120000,
+  "ate": {
+    "conversion": [
+      {
+        "name": "Full-experiment difference in means",
+        "estimate": 0.005088199592100134,
+        "se": 0.0017246891680397457,
+        "ci_low": 0.0017078709382158837,
+        "ci_high": 0.008468528245984385,
+        "n": 120000,
+        "causal": true,
+        "notes": "Primary causal benchmark. Uses every randomized user, not the modeling sample."
+      },
+      {
+        "name": "Sample difference in means",
+        "estimate": 0.005088199592100134,
+        "se": 0.0017246891680397457,
+        "ci_low": 0.0017078709382158837,
+        "ci_high": 0.008468528245984385,
+        "n": 120000,
+        "causal": true,
+        "notes": "Unadjusted ITT on this sample."
+      },
+      {
+        "name": "Regression adjustment",
+        "estimate": 0.005336664841028502,
+        "se": 0.0017048507978508964,
+        "ci_low": 0.0019952186782263687,
+        "ci_high": 0.008678111003830634,
+        "n": 120000,
+        "causal": true,
+        "notes": "Linear probability model with HC1 standard errors. Covariates are pre-treatment and winsorized."
+      },
+      {
+        "name": "IPW (H\u00e1jek)",
+        "estimate": 0.005352776323099551,
+        "se": 0.0017249577282405313,
+        "ci_low": 0.0019719213008940794,
+        "ci_high": 0.008733631345305023,
+        "n": 120000,
+        "causal": true,
+        "notes": "Cross-fit propensity, scores clipped to [0.01, 0.99]. SE treats scores as fixed."
+      },
+      {
+        "name": "AIPW (doubly robust)",
+        "estimate": 0.005302228810739635,
+        "se": 0.0017041944335346054,
+        "ci_low": 0.0019620690983581696,
+        "ci_high": 0.008642388523121101,
+        "n": 120000,
+        "causal": true,
+        "notes": "Cross-fit logistic propensity and outcome models. Interval from the influence function."
+      },
+      {
+        "name": "Not causal: controls for visit and exposure",
+        "estimate": 0.004738240026348062,
+        "se": 0.003096981477993749,
+        "ci_low": -0.0013317321313073118,
+        "ci_high": 0.010808212184003435,
+        "n": 120000,
+        "causal": false,
+        "notes": "Post-treatment controls. Shown only to illustrate the bias, not as an effect estimate."
+      }
+    ],
+    "visit": [
+      {
+        "name": "Full-experiment difference in means",
+        "estimate": 0.026948421820950696,
+        "se": 0.0025908013250353734,
+        "ci_low": 0.021870544532782712,
+        "ci_high": 0.03202629910911868,
+        "n": 120000,
+        "causal": true,
+        "notes": "Primary causal benchmark. Uses every randomized user, not the modeling sample."
+      },
+      {
+        "name": "Sample difference in means",
+        "estimate": 0.026948421820950696,
+        "se": 0.0025908013250353734,
+        "ci_low": 0.021870544532782712,
+        "ci_high": 0.03202629910911868,
+        "n": 120000,
+        "causal": true,
+        "notes": "Unadjusted ITT on this sample."
+      },
+      {
+        "name": "Regression adjustment",
+        "estimate": 0.02739908489558842,
+        "se": 0.002557168793487854,
+        "ci_low": 0.022387126157962484,
+        "ci_high": 0.032411043633214356,
+        "n": 120000,
+        "causal": true,
+        "notes": "Linear probability model with HC1 standard errors. Covariates are pre-treatment and winsorized."
+      },
+      {
+        "name": "IPW (H\u00e1jek)",
+        "estimate": 0.027399716753092385,
+        "se": 0.002591017911898564,
+        "ci_low": 0.022321414962473023,
+        "ci_high": 0.03247801854371175,
+        "n": 120000,
+        "causal": true,
+        "notes": "Cross-fit propensity, scores clipped to [0.01, 0.99]. SE treats scores as fixed."
+      },
+      {
+        "name": "AIPW (doubly robust)",
+        "estimate": 0.027347928985882782,
+        "se": 0.002557344902806705,
+        "ci_low": 0.022335625080334556,
+        "ci_high": 0.03236023289143101,
+        "n": 120000,
+        "causal": true,
+        "notes": "Cross-fit logistic propensity and outcome models. Interval from the influence function."
+      }
+    ]
+  },
+  "ipw": {
+    "propensity_min": 0.46355601710781436,
+    "propensity_p01": 0.4829541001143923,
+    "propensity_mean": 0.499528246188975,
+    "propensity_p99": 0.5166604373532322,
+    "propensity_max": 0.5412194309661896,
+    "share_clipped": 0.0,
+    "weight_min": 0.92296205830645,
+    "weight_p50": 0.999979897274549,
+    "weight_p95": 1.0232182106360102,
+    "weight_p99": 1.035104491905814,
+    "weight_max": 1.0835964123073938,
+    "weight_mean": 1.0001651750279468,
+    "effective_sample_size": 119976.56913589593,
+    "effective_sample_fraction": 0.9998047427991328,
+    "propensity_auc": 0.5018066139915802
+  },
+  "robustness": {
+    "conversion": {
+      "placebo_mean": -6.113838851072833e-05,
+      "placebo_std": 0.0016865395432947858,
+      "placebo_p_value": 0.009950248756218905,
+      "bootstrap_se": 0.0016027961492631718,
+      "bootstrap_ci_low": 0.0023488544564420335,
+      "bootstrap_ci_high": 0.008215842294192581,
+      "noise_covariate_baseline": 0.005336664841028502,
+      "noise_covariate_augmented": 0.005337675089267899,
+      "noise_covariate_absolute_change": 1.0102482393969936e-06,
+      "subsample_min": -0.002275931693231273,
+      "subsample_max": 0.012572008046085145,
+      "subsample_std": 0.003298820134376574
+    },
+    "visit": {
+      "placebo_mean": 2.2064186579594247e-05,
+      "placebo_std": 0.002479629085208591,
+      "placebo_p_value": 0.004975124378109453,
+      "bootstrap_se": 0.0026773634108151873,
+      "bootstrap_ci_low": 0.021598985332465737,
+      "bootstrap_ci_high": 0.0316677422010372,
+      "noise_covariate_baseline": 0.02739908489558842,
+      "noise_covariate_augmented": 0.027398014081953442,
+      "noise_covariate_absolute_change": 1.0708136349776853e-06,
+      "subsample_min": 0.017091752774062607,
+      "subsample_max": 0.037080298379336296,
+      "subsample_std": 0.004682722740425787
+    }
+  }
+}

@@ -1,0 +1,12 @@
+outcome,name,estimate,se,ci_low,ci_high,n,causal,notes
+conversion,Full-experiment difference in means,0.005088199592100134,0.0017246891680397457,0.0017078709382158837,0.008468528245984385,120000,True,"Primary causal benchmark. Uses every randomized user, not the modeling sample."
+conversion,Sample difference in means,0.005088199592100134,0.0017246891680397457,0.0017078709382158837,0.008468528245984385,120000,True,Unadjusted ITT on this sample.
+conversion,Regression adjustment,0.005336664841028502,0.0017048507978508964,0.0019952186782263687,0.008678111003830634,120000,True,Linear probability model with HC1 standard errors. Covariates are pre-treatment and winsorized.
+conversion,IPW (Hájek),0.005352776323099551,0.0017249577282405313,0.0019719213008940794,0.008733631345305023,120000,True,"Cross-fit propensity, scores clipped to [0.01, 0.99]. SE treats scores as fixed."
+conversion,AIPW (doubly robust),0.005302228810739635,0.0017041944335346054,0.0019620690983581696,0.008642388523121101,120000,True,Cross-fit logistic propensity and outcome models. Interval from the influence function.
+conversion,Not causal: controls for visit and exposure,0.004738240026348062,0.003096981477993749,-0.0013317321313073118,0.010808212184003435,120000,False,"Post-treatment controls. Shown only to illustrate the bias, not as an effect estimate."
+visit,Full-experiment difference in means,0.026948421820950696,0.0025908013250353734,0.021870544532782712,0.03202629910911868,120000,True,"Primary causal benchmark. Uses every randomized user, not the modeling sample."
+visit,Sample difference in means,0.026948421820950696,0.0025908013250353734,0.021870544532782712,0.03202629910911868,120000,True,Unadjusted ITT on this sample.
+visit,Regression adjustment,0.02739908489558842,0.002557168793487854,0.022387126157962484,0.032411043633214356,120000,True,Linear probability model with HC1 standard errors. Covariates are pre-treatment and winsorized.
+visit,IPW (Hájek),0.027399716753092385,0.002591017911898564,0.022321414962473023,0.03247801854371175,120000,True,"Cross-fit propensity, scores clipped to [0.01, 0.99]. SE treats scores as fixed."
+visit,AIPW (doubly robust),0.027347928985882782,0.002557344902806705,0.022335625080334556,0.03236023289143101,120000,True,Cross-fit logistic propensity and outcome models. Interval from the influence function.

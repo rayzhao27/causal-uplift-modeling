@@ -1,0 +1,19 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+.DS_Store
+.streamlit/secrets.toml
+
+# Large source files. Regenerate with: python run_analysis.py
+data/raw/*.gz
+data/raw/*.csv
+data/processed/*.parquet
+data/processed/*.duckdb
+data/processed/duckdb_tmp/
+
+# Keep directory placeholders
+!data/raw/.gitkeep
+!data/processed/.gitkeep

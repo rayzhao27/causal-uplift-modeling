@@ -1,0 +1,28 @@
+-- Missingness and identifier integrity.
+SELECT
+    COUNT(*) AS n_rows,
+    COUNT(DISTINCT row_id) AS distinct_row_id,
+    COUNT(*) - COUNT(treatment) AS missing_treatment,
+    COUNT(*) - COUNT(conversion) AS missing_conversion,
+    COUNT(*) - COUNT(visit) AS missing_visit,
+    COUNT(*) - COUNT(exposure) AS missing_exposure,
+    COUNT(*) - COUNT(age) AS missing_age,
+    COUNT(*) - COUNT(tenure_months) AS missing_tenure_months,
+    COUNT(*) - COUNT(prior_purchases) AS missing_prior_purchases,
+    COUNT(*) - COUNT(prior_spend) AS missing_prior_spend,
+    COUNT(*) - COUNT(recency_days) AS missing_recency_days,
+    COUNT(*) - COUNT(sessions_30d) AS missing_sessions_30d,
+    COUNT(*) - COUNT(email_opens_30d) AS missing_email_opens_30d,
+    COUNT(*) - COUNT(pages_viewed_30d) AS missing_pages_viewed_30d,
+    COUNT(*) - COUNT(avg_order_value) AS missing_avg_order_value,
+    COUNT(*) - COUNT(discount_sensitivity) AS missing_discount_sensitivity,
+    COUNT(*) - COUNT(is_loyalty_member) AS missing_is_loyalty_member,
+    COUNT(*) - COUNT(is_weekend_shopper) AS missing_is_weekend_shopper,
+    COUNT(*) - COUNT(device_mobile) AS missing_device_mobile,
+    COUNT(*) - COUNT(device_desktop) AS missing_device_desktop,
+    SUM(CASE WHEN treatment NOT IN (0, 1) THEN 1 ELSE 0 END) AS invalid_treatment,
+    SUM(CASE WHEN conversion NOT IN (0, 1) THEN 1 ELSE 0 END) AS invalid_conversion,
+    SUM(CASE WHEN visit NOT IN (0, 1) THEN 1 ELSE 0 END) AS invalid_visit,
+    SUM(CASE WHEN exposure NOT IN (0, 1) THEN 1 ELSE 0 END) AS invalid_exposure,
+    COUNT(*) - COUNT(DISTINCT hash(row_id)) AS duplicate_hash_rows
+FROM experiment;

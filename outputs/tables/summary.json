@@ -1,0 +1,668 @@
+{
+  "dataset": {
+    "name": "Synthetic randomized promotion experiment",
+    "n_rows": 120000,
+    "n_treatment": 59943,
+    "n_control": 60057,
+    "treatment_share": 0.499525,
+    "sample_n": 120000,
+    "features": [
+      "age",
+      "tenure_months",
+      "prior_purchases",
+      "prior_spend",
+      "recency_days",
+      "sessions_30d",
+      "email_opens_30d",
+      "pages_viewed_30d",
+      "avg_order_value",
+      "discount_sensitivity",
+      "is_loyalty_member",
+      "is_weekend_shopper",
+      "device_mobile",
+      "device_desktop"
+    ],
+    "excluded_from_models": [
+      "exposure",
+      "visit",
+      "conversion",
+      "true_cate_conversion",
+      "true_cate_visit"
+    ],
+    "exposure_rate_treatment": 0.8205128205128205,
+    "exposure_rate_control": 0.0
+  },
+  "quality": {
+    "n_rows": 120000.0,
+    "distinct_row_id": 120000.0,
+    "missing_treatment": 0.0,
+    "missing_conversion": 0.0,
+    "missing_visit": 0.0,
+    "missing_exposure": 0.0,
+    "missing_age": 0.0,
+    "missing_tenure_months": 0.0,
+    "missing_prior_purchases": 0.0,
+    "missing_prior_spend": 0.0,
+    "missing_recency_days": 0.0,
+    "missing_sessions_30d": 0.0,
+    "missing_email_opens_30d": 0.0,
+    "missing_pages_viewed_30d": 0.0,
+    "missing_avg_order_value": 0.0,
+    "missing_discount_sensitivity": 0.0,
+    "missing_is_loyalty_member": 0.0,
+    "missing_is_weekend_shopper": 0.0,
+    "missing_device_mobile": 0.0,
+    "missing_device_desktop": 0.0,
+    "invalid_treatment": 0.0,
+    "invalid_conversion": 0.0,
+    "invalid_visit": 0.0,
+    "invalid_exposure": 0.0,
+    "duplicate_hash_rows": 0.0
+  },
+  "n_extreme_features": 0,
+  "balance": {
+    "balanced": true,
+    "max_abs_smd_pretreatment": 0.013826143422476577,
+    "n_flagged_pretreatment": 0,
+    "threshold": 0.1,
+    "verdict": "Yes. Pre-treatment covariates are balanced: the largest absolute standardized difference is 0.0138, below the 0.10 threshold. Treatment assignment is consistent with the randomized design, so the unadjusted difference in outcomes is a credible causal estimate. exposure is post-treatment and is imbalanced (SMD 3.024); it is excluded from every model."
+  },
+  "experiment": {
+    "conversion": {
+      "outcome": "conversion",
+      "n_treatment": 59943,
+      "n_control": 60057,
+      "conversions_treatment": 6090,
+      "conversions_control": 5796,
+      "rate_treatment": 0.10159651669085631,
+      "rate_control": 0.09650831709875618,
+      "absolute_lift": 0.005088199592100134,
+      "absolute_se": 0.0017246891680397457,
+      "ci_low": 0.0017078709382158837,
+      "ci_high": 0.008468528245984385,
+      "relative_lift": 0.05272291285416797,
+      "relative_lift_ci_low": 0.017389962710414597,
+      "relative_lift_ci_high": 0.08928294151414251,
+      "risk_ratio": 1.052722912854168,
+      "risk_ratio_ci_low": 1.0173899627104146,
+      "risk_ratio_ci_high": 1.0892829415141425,
+      "z_statistic": 2.950169613170141,
+      "z_pvalue": 0.0031759952118484273,
+      "chi2_statistic": 8.70350074647245,
+      "chi2_pvalue": 0.003175995211848443,
+      "rate_treatment_ci_low": 0.09920344565533691,
+      "rate_treatment_ci_high": 0.10404064798369399,
+      "rate_control_ci_low": 0.09417243488460458,
+      "rate_control_ci_high": 0.09889581353098098,
+      "observed_effect": 0.005088199592100134,
+      "cohens_h": 0.017033953873372032,
+      "achieved_power": 0.8390116303345859,
+      "mde_80_power": 0.004776258863914573,
+      "required_sample_sizes": [
+        {
+          "delta": 0.002,
+          "n_treatment": 345015.31215924956,
+          "n_control": 345671.46459716815,
+          "n_total": 690686.7767564177
+        },
+        {
+          "delta": 0.005,
+          "n_treatment": 55951.49168831374,
+          "n_control": 56057.900610998084,
+          "n_total": 112009.39229931182
+        },
+        {
+          "delta": 0.01,
+          "n_treatment": 14295.282233466973,
+          "n_control": 14322.469097231135,
+          "n_total": 28617.751330698105
+        },
+        {
+          "delta": 0.02,
+          "n_treatment": 3723.4078536116062,
+          "n_control": 3730.489055675429,
+          "n_total": 7453.896909287036
+        }
+      ]
+    },
+    "visit": {
+      "outcome": "visit",
+      "n_treatment": 59943,
+      "n_control": 60057,
+      "conversions_treatment": 17584,
+      "conversions_control": 15999,
+      "rate_treatment": 0.2933453447441736,
+      "rate_control": 0.2663969229232229,
+      "absolute_lift": 0.026948421820950696,
+      "absolute_se": 0.0025908013250353734,
+      "ci_low": 0.021870544532782712,
+      "ci_high": 0.03202629910911868,
+      "relative_lift": 0.10115890801305305,
+      "relative_lift_ci_low": 0.0813204663535676,
+      "relative_lift_ci_high": 0.1213613155639861,
+      "risk_ratio": 1.101158908013053,
+      "risk_ratio_ci_low": 1.0813204663535676,
+      "risk_ratio_ci_high": 1.121361315563986,
+      "z_statistic": 10.397182727466564,
+      "z_pvalue": 2.5537195736757177e-25,
+      "chi2_statistic": 108.10140866832937,
+      "chi2_pvalue": 2.553719573675351e-25,
+      "rate_treatment_ci_low": 0.28971389385582247,
+      "rate_treatment_ci_high": 0.29700328094280803,
+      "rate_control_ci_low": 0.26287635920087066,
+      "rate_control_ci_high": 0.269947368897611,
+      "observed_effect": 0.026948421820950696,
+      "cohens_h": 0.06004287795445018,
+      "achieved_power": 1.0,
+      "mde_80_power": 0.0071505357141113165,
+      "required_sample_sizes": [
+        {
+          "delta": 0.002,
+          "n_treatment": 768047.4007087067,
+          "n_control": 769508.0784138731,
+          "n_total": 1537555.4791225798
+        },
+        {
+          "delta": 0.005,
+          "n_treatment": 123321.92764381424,
+          "n_control": 123556.46211408424,
+          "n_total": 246878.38975789846
+        },
+        {
+          "delta": 0.01,
+          "n_treatment": 31008.96891269488,
+          "n_control": 31067.94197804108,
+          "n_total": 62076.91089073596
+        },
+        {
+          "delta": 0.02,
+          "n_treatment": 7839.1886270539135,
+          "n_control": 7854.097248635819,
+          "n_total": 15693.285875689733
+        }
+      ]
+    }
+  },
+  "ate": {
+    "conversion": [
+      {
+        "name": "Full-experiment difference in means",
+        "estimate": 0.005088199592100134,
+        "se": 0.0017246891680397457,
+        "ci_low": 0.0017078709382158837,
+        "ci_high": 0.008468528245984385,
+        "n": 120000,
+        "causal": true,
+        "notes": "Primary causal benchmark. Uses every randomized user, not the modeling sample."
+      },
+      {
+        "name": "Sample difference in means",
+        "estimate": 0.005088199592100134,
+        "se": 0.0017246891680397457,
+        "ci_low": 0.0017078709382158837,
+        "ci_high": 0.008468528245984385,
+        "n": 120000,
+        "causal": true,
+        "notes": "Unadjusted ITT on this sample."
+      },
+      {
+        "name": "Regression adjustment",
+        "estimate": 0.005336664841028502,
+        "se": 0.0017048507978508964,
+        "ci_low": 0.0019952186782263687,
+        "ci_high": 0.008678111003830634,
+        "n": 120000,
+        "causal": true,
+        "notes": "Linear probability model with HC1 standard errors. Covariates are pre-treatment and winsorized."
+      },
+      {
+        "name": "IPW (H\u00e1jek)",
+        "estimate": 0.005352776323099551,
+        "se": 0.0017249577282405313,
+        "ci_low": 0.0019719213008940794,
+        "ci_high": 0.008733631345305023,
+        "n": 120000,
+        "causal": true,
+        "notes": "Cross-fit propensity, scores clipped to [0.01, 0.99]. SE treats scores as fixed."
+      },
+      {
+        "name": "AIPW (doubly robust)",
+        "estimate": 0.005302228810739635,
+        "se": 0.0017041944335346054,
+        "ci_low": 0.0019620690983581696,
+        "ci_high": 0.008642388523121101,
+        "n": 120000,
+        "causal": true,
+        "notes": "Cross-fit logistic propensity and outcome models. Interval from the influence function."
+      },
+      {
+        "name": "Not causal: controls for visit and exposure",
+        "estimate": 0.004738240026348062,
+        "se": 0.003096981477993749,
+        "ci_low": -0.0013317321313073118,
+        "ci_high": 0.010808212184003435,
+        "n": 120000,
+        "causal": false,
+        "notes": "Post-treatment controls. Shown only to illustrate the bias, not as an effect estimate."
+      }
+    ],
+    "visit": [
+      {
+        "name": "Full-experiment difference in means",
+        "estimate": 0.026948421820950696,
+        "se": 0.0025908013250353734,
+        "ci_low": 0.021870544532782712,
+        "ci_high": 0.03202629910911868,
+        "n": 120000,
+        "causal": true,
+        "notes": "Primary causal benchmark. Uses every randomized user, not the modeling sample."
+      },
+      {
+        "name": "Sample difference in means",
+        "estimate": 0.026948421820950696,
+        "se": 0.0025908013250353734,
+        "ci_low": 0.021870544532782712,
+        "ci_high": 0.03202629910911868,
+        "n": 120000,
+        "causal": true,
+        "notes": "Unadjusted ITT on this sample."
+      },
+      {
+        "name": "Regression adjustment",
+        "estimate": 0.02739908489558842,
+        "se": 0.002557168793487854,
+        "ci_low": 0.022387126157962484,
+        "ci_high": 0.032411043633214356,
+        "n": 120000,
+        "causal": true,
+        "notes": "Linear probability model with HC1 standard errors. Covariates are pre-treatment and winsorized."
+      },
+      {
+        "name": "IPW (H\u00e1jek)",
+        "estimate": 0.027399716753092385,
+        "se": 0.002591017911898564,
+        "ci_low": 0.022321414962473023,
+        "ci_high": 0.03247801854371175,
+        "n": 120000,
+        "causal": true,
+        "notes": "Cross-fit propensity, scores clipped to [0.01, 0.99]. SE treats scores as fixed."
+      },
+      {
+        "name": "AIPW (doubly robust)",
+        "estimate": 0.027347928985882782,
+        "se": 0.002557344902806705,
+        "ci_low": 0.022335625080334556,
+        "ci_high": 0.03236023289143101,
+        "n": 120000,
+        "causal": true,
+        "notes": "Cross-fit logistic propensity and outcome models. Interval from the influence function."
+      }
+    ]
+  },
+  "ipw": {
+    "propensity_min": 0.46355601710781436,
+    "propensity_p01": 0.4829541001143923,
+    "propensity_mean": 0.499528246188975,
+    "propensity_p99": 0.5166604373532322,
+    "propensity_max": 0.5412194309661896,
+    "share_clipped": 0.0,
+    "weight_min": 0.92296205830645,
+    "weight_p50": 0.999979897274549,
+    "weight_p95": 1.0232182106360102,
+    "weight_p99": 1.035104491905814,
+    "weight_max": 1.0835964123073938,
+    "weight_mean": 1.0001651750279468,
+    "effective_sample_size": 119976.56913589593,
+    "effective_sample_fraction": 0.9998047427991328,
+    "propensity_auc": 0.5018066139915802
+  },
+  "robustness": {
+    "conversion": {
+      "placebo_mean": -6.113838851072833e-05,
+      "placebo_std": 0.0016865395432947858,
+      "placebo_p_value": 0.009950248756218905,
+      "bootstrap_se": 0.0016027961492631718,
+      "bootstrap_ci_low": 0.0023488544564420335,
+      "bootstrap_ci_high": 0.008215842294192581,
+      "noise_covariate_baseline": 0.005336664841028502,
+      "noise_covariate_augmented": 0.005337675089267899,
+      "noise_covariate_absolute_change": 1.0102482393969936e-06,
+      "subsample_min": -0.002275931693231273,
+      "subsample_max": 0.012572008046085145,
+      "subsample_std": 0.003298820134376574
+    },
+    "visit": {
+      "placebo_mean": 2.2064186579594247e-05,
+      "placebo_std": 0.002479629085208591,
+      "placebo_p_value": 0.004975124378109453,
+      "bootstrap_se": 0.0026773634108151873,
+      "bootstrap_ci_low": 0.021598985332465737,
+      "bootstrap_ci_high": 0.0316677422010372,
+      "noise_covariate_baseline": 0.02739908489558842,
+      "noise_covariate_augmented": 0.027398014081953442,
+      "noise_covariate_absolute_change": 1.0708136349776853e-06,
+      "subsample_min": 0.017091752774062607,
+      "subsample_max": 0.037080298379336296,
+      "subsample_std": 0.004682722740425787
+    }
+  },
+  "uplift": {
+    "conversion": {
+      "selected_model": "R-learner",
+      "beats_random": true,
+      "decile_spearman": 0.5515151515151515,
+      "models": {
+        "T-learner": {
+          "val_qini": 46.34196853135781,
+          "test_qini": 56.52225286121106,
+          "test_qini_ci_low": null,
+          "test_qini_ci_high": null
+        },
+        "R-learner": {
+          "val_qini": 51.462464902268806,
+          "test_qini": 32.234107891138436,
+          "test_qini_ci_low": 3.5621324138149304,
+          "test_qini_ci_high": 60.40702227864256
+        }
+      },
+      "split_sizes": {
+        "train": 66000,
+        "validation": 18000,
+        "test": 36000
+      },
+      "ground_truth": {
+        "spearman": 0.6340178888332187,
+        "rmse": 0.01631541749600784,
+        "mean_true_cate": 0.005303758198442999
+      }
+    },
+    "visit": {
+      "selected_model": "R-learner",
+      "beats_random": false,
+      "decile_spearman": 0.10303030303030303,
+      "models": {
+        "T-learner": {
+          "val_qini": 27.804834907101167,
+          "test_qini": 37.51175594180785,
+          "test_qini_ci_low": null,
+          "test_qini_ci_high": null
+        },
+        "R-learner": {
+          "val_qini": 46.02370267335682,
+          "test_qini": 10.844264742831825,
+          "test_qini_ci_low": -33.05410831694146,
+          "test_qini_ci_high": 49.93388809703524
+        }
+      },
+      "split_sizes": {
+        "train": 66000,
+        "validation": 18000,
+        "test": 36000
+      },
+      "ground_truth": {
+        "spearman": 0.42582322308829307,
+        "rmse": 0.020141435707010054,
+        "mean_true_cate": 0.024315299365761114
+      }
+    }
+  },
+  "policy": {
+    "conversion": {
+      "cost": 1.25,
+      "value": 40.0,
+      "selected_fraction_validation": 0.05,
+      "exploratory_test_best_fraction": 0.01,
+      "exploratory_test_best_profit": -73.05764411027565,
+      "test_performance": {
+        "target_fraction": 0.05,
+        "users_targeted": 1800.0,
+        "n_treatment_in_slice": 881.0,
+        "n_control_in_slice": 919.0,
+        "rate_treatment": 0.15891032917139614,
+        "rate_control": 0.14907508161044614,
+        "uplift_rate": 0.00983524756095,
+        "uplift_se": 0.01702186315180772,
+        "incremental_conversions": 17.703445609710002,
+        "incremental_conversions_se": 30.639353673253897,
+        "incremental_conversions_per_1000": 9.83524756095,
+        "mean_predicted_cate": 0.047674714910083335,
+        "share_of_treat_all_incremental": 0.18291165616982025,
+        "incremental_profit": -1541.8621756116,
+        "campaign_cost": 2250.0,
+        "incremental_value": 708.1378243884001
+      },
+      "treat_all_test": {
+        "target_fraction": 1.0,
+        "users_targeted": 36000.0,
+        "n_treatment_in_slice": 17983.0,
+        "n_control_in_slice": 18017.0,
+        "rate_treatment": 0.10115108713785241,
+        "rate_control": 0.09846256313481712,
+        "uplift_rate": 0.002688524003035292,
+        "uplift_se": 0.0031595483511026885,
+        "incremental_conversions": 96.78686410927051,
+        "incremental_conversions_se": 113.74374063969678,
+        "incremental_conversions_per_1000": 2.688524003035292,
+        "mean_predicted_cate": 0.006795074878988633,
+        "share_of_treat_all_incremental": 1.0,
+        "incremental_profit": -41128.52543562918,
+        "campaign_cost": 45000.0,
+        "incremental_value": 3871.47456437082
+      },
+      "cohort_100k": {
+        "cohort_n": 100000,
+        "target_fraction": 0.05,
+        "users_targeted": 5000,
+        "incremental_outcomes": 49.17623780475,
+        "incremental_outcomes_per_1000": 9.83524756095,
+        "share_of_treat_all_incremental": 0.18291165616982025,
+        "campaign_cost": 6250.0,
+        "incremental_value": 1967.04951219,
+        "incremental_profit": -4282.95048781
+      },
+      "breakeven_value_per_outcome": 245.66646362315112,
+      "sensitivity": [
+        {
+          "cost": 0.5,
+          "value": 20.0,
+          "selected_fraction_validation": 0.2,
+          "test_incremental_conversions": 80.80689113025299,
+          "test_profit": -1983.86217739494
+        },
+        {
+          "cost": 0.5,
+          "value": 40.0,
+          "selected_fraction_validation": 0.4,
+          "test_incremental_conversions": 56.70411771883106,
+          "test_profit": -4931.835291246758
+        },
+        {
+          "cost": 0.5,
+          "value": 80.0,
+          "selected_fraction_validation": 0.4,
+          "test_incremental_conversions": 56.70411771883106,
+          "test_profit": -2663.670582493515
+        },
+        {
+          "cost": 1.25,
+          "value": 20.0,
+          "selected_fraction_validation": 0.05,
+          "test_incremental_conversions": 17.703445609710002,
+          "test_profit": -1895.9310878058
+        },
+        {
+          "cost": 1.25,
+          "value": 40.0,
+          "selected_fraction_validation": 0.05,
+          "test_incremental_conversions": 17.703445609710002,
+          "test_profit": -1541.8621756116
+        },
+        {
+          "cost": 1.25,
+          "value": 80.0,
+          "selected_fraction_validation": 0.4,
+          "test_incremental_conversions": 56.70411771883106,
+          "test_profit": -13463.670582493516
+        },
+        {
+          "cost": 2.5,
+          "value": 20.0,
+          "selected_fraction_validation": 0.0,
+          "test_incremental_conversions": 0.0,
+          "test_profit": 0.0
+        },
+        {
+          "cost": 2.5,
+          "value": 40.0,
+          "selected_fraction_validation": 0.05,
+          "test_incremental_conversions": 17.703445609710002,
+          "test_profit": -3791.8621756116
+        },
+        {
+          "cost": 2.5,
+          "value": 80.0,
+          "selected_fraction_validation": 0.05,
+          "test_incremental_conversions": 17.703445609710002,
+          "test_profit": -3083.7243512232
+        }
+      ]
+    },
+    "visit": {
+      "cost": 1.25,
+      "value": 2.0,
+      "selected_fraction_validation": 0.0,
+      "exploratory_test_best_fraction": 0.01,
+      "exploratory_test_best_profit": -436.7084483881977,
+      "test_performance": {
+        "target_fraction": 0.0,
+        "users_targeted": 0.0,
+        "n_treatment_in_slice": 0.0,
+        "n_control_in_slice": 0.0,
+        "rate_treatment": 0.0,
+        "rate_control": 0.0,
+        "uplift_rate": 0.0,
+        "uplift_se": 0.0,
+        "incremental_conversions": 0.0,
+        "incremental_conversions_se": 0.0,
+        "incremental_conversions_per_1000": 0.0,
+        "mean_predicted_cate": 0.0,
+        "share_of_treat_all_incremental": 0.0,
+        "incremental_profit": 0.0,
+        "campaign_cost": 0.0,
+        "incremental_value": 0.0
+      },
+      "treat_all_test": {
+        "target_fraction": 1.0,
+        "users_targeted": 36000.0,
+        "n_treatment_in_slice": 17983.0,
+        "n_control_in_slice": 18017.0,
+        "rate_treatment": 0.2897180670633376,
+        "rate_control": 0.26830215907198757,
+        "uplift_rate": 0.021415907991350014,
+        "uplift_se": 0.004726444032144376,
+        "incremental_conversions": 770.9726876886004,
+        "incremental_conversions_se": 170.15198515719754,
+        "incremental_conversions_per_1000": 21.415907991350014,
+        "mean_predicted_cate": 0.03373093696828135,
+        "share_of_treat_all_incremental": 1.0,
+        "incremental_profit": -43458.0546246228,
+        "campaign_cost": 45000.0,
+        "incremental_value": 1541.945375377201
+      },
+      "cohort_100k": {
+        "cohort_n": 100000,
+        "target_fraction": 0.0,
+        "users_targeted": 0,
+        "incremental_outcomes": 0.0,
+        "incremental_outcomes_per_1000": 0.0,
+        "share_of_treat_all_incremental": 0.0,
+        "campaign_cost": 0.0,
+        "incremental_value": 0.0,
+        "incremental_profit": 0.0
+      },
+      "breakeven_value_per_outcome": 46.38490551710913,
+      "sensitivity": [
+        {
+          "cost": 0.5,
+          "value": 1.0,
+          "selected_fraction_validation": 0.0,
+          "test_incremental_conversions": 0.0,
+          "test_profit": 0.0
+        },
+        {
+          "cost": 0.5,
+          "value": 2.0,
+          "selected_fraction_validation": 0.0,
+          "test_incremental_conversions": 0.0,
+          "test_profit": 0.0
+        },
+        {
+          "cost": 0.5,
+          "value": 4.0,
+          "selected_fraction_validation": 0.0,
+          "test_incremental_conversions": 0.0,
+          "test_profit": 0.0
+        },
+        {
+          "cost": 1.25,
+          "value": 1.0,
+          "selected_fraction_validation": 0.0,
+          "test_incremental_conversions": 0.0,
+          "test_profit": 0.0
+        },
+        {
+          "cost": 1.25,
+          "value": 2.0,
+          "selected_fraction_validation": 0.0,
+          "test_incremental_conversions": 0.0,
+          "test_profit": 0.0
+        },
+        {
+          "cost": 1.25,
+          "value": 4.0,
+          "selected_fraction_validation": 0.0,
+          "test_incremental_conversions": 0.0,
+          "test_profit": 0.0
+        },
+        {
+          "cost": 2.5,
+          "value": 1.0,
+          "selected_fraction_validation": 0.0,
+          "test_incremental_conversions": 0.0,
+          "test_profit": 0.0
+        },
+        {
+          "cost": 2.5,
+          "value": 2.0,
+          "selected_fraction_validation": 0.0,
+          "test_incremental_conversions": 0.0,
+          "test_profit": 0.0
+        },
+        {
+          "cost": 2.5,
+          "value": 4.0,
+          "selected_fraction_validation": 0.0,
+          "test_incremental_conversions": 0.0,
+          "test_profit": 0.0
+        }
+      ]
+    }
+  },
+  "ground_truth": {
+    "conversion": {
+      "mean_true_cate": 0.0052404689033143485,
+      "ate": 0.005088199592100134,
+      "ate_error": 0.00015226931121421414,
+      "test_spearman": 0.6340178888332187,
+      "test_rmse": 0.01631541749600784
+    },
+    "visit": {
+      "mean_true_cate": 0.024268211508738244,
+      "ate": 0.026948421820950696,
+      "ate_error": 0.0026802103122124527,
+      "test_spearman": 0.42582322308829307,
+      "test_rmse": 0.020141435707010054
+    }
+  },
+  "recommendation": "The campaign's intent-to-treat effect on conversion is 0.509 percentage points (9.651% in control, 10.160% in treatment, 95% CI 0.171 percentage points to 0.847 percentage points, p 0.0032). Relative to the control rate that is a 5.3% relative lift, or 50.88 incremental conversions per 10,000 treated users. Achieved power at the observed effect is 0.839, and the minimum detectable effect at 80% power is 0.478 percentage points. With a sample this large, a tiny lift can be statistically significant; the operating question is whether the lift covers the cost of treatment. The same assignment increases visits by 2.695 percentage points (26.640% vs 29.335%, 95% CI 2.187 percentage points to 3.203 percentage points). Visit is an engagement outcome, not a substitute for conversion. Yes. Pre-treatment covariates are balanced: the largest absolute standardized difference is 0.0138, below the 0.10 threshold. Treatment assignment is consistent with the randomized design, so the unadjusted difference in outcomes is a credible causal estimate. exposure is post-treatment and is imbalanced (SMD 3.024); it is excluded from every model. On the modeling sample the estimates are Full-experiment difference in means 0.509 percentage points, Sample difference in means 0.509 percentage points, Regression adjustment 0.534 percentage points, IPW (H\u00e1jek) 0.535 percentage points, AIPW (doubly robust) 0.530 percentage points. The spread from lowest to highest is 0.026 percentage points. These causal estimators agree to within about two standard errors of the sample difference in means. That is what a randomized experiment should produce: with a nearly constant propensity score, regression adjustment, inverse-probability weighting, and the doubly robust estimator all target the same risk difference. The data are simulated, so the conversion effect is known. The average true effect is 0.524 percentage points; the experiment estimate differs from it by 0.015 percentage points. On the held-out test set the selected conversion model has Spearman correlation 0.63 with the true individual effect. For conversion, select users with the R-learner, which won on the validation Qini coefficient. On the locked test set its Qini coefficient is 32.2341 (95% interval 3.5621 to 60.4070). The fraction chosen on validation is the top 5%. On the test set that policy targets 1,800 users, produces 17.7 incremental conversions (9.84 per 1,000 targeted), and captures 18.3% of the incremental conversions from treating everyone. At the assumed economics its test-set profit is -$1,541.86, compared with -$41,128.53 from treating everyone in the test set. Out-of-sample visit ranking does not reliably beat random targeting. The validation-selected model is R-learner, with a test Qini coefficient of 10.8443 (95% interval -33.0541 to 49.9339). Do not deploy an individual targeting score for this outcome; use the average effect and unit economics. Break-even, ignoring heterogeneity: at a treatment cost of $1.25, a conversion must be worth at least $245.67 for treating everyone to pay for itself. The analysis assumes $40.00. That value is an assumption, not an estimate from the experiment. Decision: do not launch this offer. The conversion lift is real, and the uplift score ranks users better than chance, but the validation-chosen top 5% loses $1,541.86 on the locked test set. The least-negative point on the test-set profit curve is the top 1%, at -$73.06. Treating nobody earns zero and beats every targeting fraction under the stated cost and value. Revisit the offer only if the contact cost falls or the margin per conversion rises enough to clear the break-even value above."
+}
